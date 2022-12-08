@@ -14,7 +14,7 @@ function App() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
+    //try {
       setLoading(true);
       setError("");
       const response = await fetch(process.env.REACT_APP_API_URL, {
@@ -34,10 +34,10 @@ function App() {
         setError(data.error);
       }
       setLoading(false);
-    } catch (error) {
-      setLoading(false);
-      setError(error);
-    }
+   // } catch (error) {
+    //   setLoading(false);
+    //   setError(error);
+    // }
   };
   return (
     <div className="bg-slate-200 min-h-screen">
